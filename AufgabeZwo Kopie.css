@@ -3,13 +3,26 @@
 body {
     background-color: #320374;
     font-family: Impact, Haettenschweiler, 'host grotesk', sans-serif
-
 }
 
-h1 {
-    color: rgb(248, 245, 245);
-    text-align: center;
-}
+
+
+li {
+    display: inline;
+  }
+li {
+    float: left;
+  }
+  ul 
+  {
+    background-color: #dddddd;
+  }
+  
+  a {
+    display: block;
+    padding: 8px;
+    background-color: #320374;
+  }
 
 h2
 {
