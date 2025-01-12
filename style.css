@@ -92,26 +92,56 @@ body {
   color:#5229AB;
 }
 
-.full-width-box {
+.bild-text {
     width: 100%;
-    background-color: #5229AB;
+    height: 800px;
+    background: url('https://github.com/christopherholz1983/christopherholz1983.github.io/blob/main/img/Bild_eingefaerbt.jpg?raw=true') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.text-overlay {
+    padding: 2%;
     color: white;
+    font-size: 50px;
     text-align: left;
-    font-size: 2rem;
-    font-weight: 500;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    padding-left: 2%;
-    padding-right: 2%;
 }
 
-.image-container {
-    width: 100%;
-    overflow: hidden;
-}
-
-.responsive-image {
+.ueber-mich-box {
     width: 100%;
     height: auto;
-    display: block; /* Removes extra spacing below the image */
+    background-color: black;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: space-between; /* Keeps text on the left and image on the right */
+    align-items: center; /* Vertically center both text and image */
+    padding-left: 2%; /* Optional: Adds space on the left */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    width: 65%;
+}
+
+.kopfzeile-ueber-mich {
+    font-size: 1rem;
+    color: #74F1FF;
+    margin-bottom: 10px; /* Adds spacing below subheading */
+}
+
+.headline-ueber-mich {
+    font-size: 2rem;
+    color: white;
+}
+
+.right-image {
+    width: 30%;
+    height: auto;
+    margin-left: auto;
+    margin-right: 2%;
 }
