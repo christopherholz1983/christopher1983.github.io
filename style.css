@@ -1,91 +1,117 @@
+@charset "UTF-8";
+/* CSS Document */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Reset basic styles */
+body, h1, p, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 
 body {
-    font-family: 'Raleway', sans-serif;
-    line-height: 1.6;
-    color: #333;
+  margin: auto;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.2;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
+/* Sticky navigation bar styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #74F1FF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  z-index: 1000;
+  box-sizing: border-box;
+  overflow: hidden;
+}
 
-header {
-    background-color: #74F1FF;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    padding: 1rem 2rem;
+/* Logo container with logo image and name */
+
+.logo-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    z-index: 1000;
-}
+    justify-content: center;
+    gap: 15px;
+  }
 
-#header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-#header-inner h1 {
-    font-size: 1.5rem;
-    color: #222;
-}
-
-#header-inner a {
-    text-decoration: none;
-    color: #222;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-#header-inner a:hover {
-    color: #5229AB;
-}
-
-
-.full-width-box {
-    width: 100vw;
-    background-color: #5229AB;
-    color: white;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.full-width-box a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-}
-
-.full-width-box a:hover {
-    color: #8387F7;
-}
-
-.content {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 1rem;
-}
-
-.content h2 {
-    margin-bottom: 1rem;
-    color: #5229AB;
-}
-
-.content p {
-    margin-bottom: 1rem;
-}
+.logo {
+    max-width: 90px;
+    height: auto;
   }
   
+  /* Name styling */
+  .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    align-self: center;
+  }
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: black;
+}
+
+/* Navigation links list */
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  flex-grow: 1; 
+  flex-shrink: 1;
+  justify-content: flex-end;
+  gap: 70px;
+  padding: 0;
+  margin: 0; 
+}
+
+.nav-links li {
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color:#5229AB;
+}
+
+.full-width-box {
+    width: 100%;
+    background-color: #5229AB;
+    color: white;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 500;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.image-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes extra spacing below the image */
+}
