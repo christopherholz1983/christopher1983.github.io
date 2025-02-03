@@ -1,0 +1,411 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset basic styles */
+body, h1, p, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+section {
+  scroll-margin-top: 99px;
+}
+
+body {
+  margin: auto;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.2;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Sticky navigation bar styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #74F1FF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  z-index: 1000;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+/* Logo container with logo image and name */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+.logo {
+    max-width: 90px;
+    height: auto;
+  }
+  
+  /* Name styling */
+  .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    align-self: center;
+  }
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: black;
+}
+
+/* Navigation links list */
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  flex-grow: 1; 
+  flex-shrink: 1;
+  justify-content: flex-end;
+  gap: 70px;
+  padding: 0;
+  margin: 0; 
+}
+
+.nav-links li {
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Style the dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block
+}
+
+/* Hide dropdown menu by default */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 20px; /* Places the dropdown below the nav item */
+  left: 0;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 200px; /* Adjust width as needed */
+  z-index: 1000;
+  text-align: left;
+}
+
+/* Style individual dropdown items */
+.dropdown-menu li {
+  width: 100%;
+  text-align: left;
+}
+
+/* Style dropdown links */
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-menu li a:hover {
+  background-color: #74F1FF;
+  display: block;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover { 
+  display: block; 
+}
+
+
+.bild-text {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  overflow: hidden; /* Ensure no parts of the rotating image extend outside the box */
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.rotating-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250%; /* Scale the image slightly larger to cover the container fully while rotating */
+  height: 250%; /* Ensures the image fills the box during rotation */
+  background: url('https://github.com/christopherholz1983/christopherholz1983.github.io/blob/main/img/bild_zentriert_blau.png?raw=true') no-repeat center center;
+  background-size: cover; /* Makes sure the image scales proportionally */
+  transform: translate(-50%, -50%); /* Center the image within the container */
+  animation: rotate 60s linear infinite; /* Apply rotation animation */
+  transform-origin: center; /* Rotate around the center */
+  }
+
+  .text-overlay {
+    position: relative; /* Keep text static within the container */
+    z-index: 1; /* Ensure text is above the rotating image */
+    padding: 2%;
+    color: white;
+    font-size: 5rem;
+    text-align: left;
+    }
+
+    @keyframes rotate {
+      from {
+      transform: translate(-50%, -50%) rotate(0deg); /* Start at 0 degrees */
+      }
+      to {
+      transform: translate(-50%, -50%) rotate(360deg); /* Rotate a full circle */
+      }
+      }
+
+.ueber-mich-box {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    width: 65%;
+}
+
+.kopfzeile-ueber-mich {
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 10px; /* Adds spacing below subheading */
+}
+
+.headline-ueber-mich {
+    font-size: 2rem;
+    color: black;
+}
+
+.text-ueber-mich {
+    font-size: 1.5rem;
+    color: black;
+    margin-top: 30px;
+    margin-right: 50px; 
+    line-height: 1.5;
+}
+
+.right-image {
+    width: 20%;  
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    border-radius: 50%;
+    object-fit: cover; 
+    display: block; 
+    transition: opacity 0.3s ease-in-out;
+}
+
+.ueber-mich-box:hover .right-image {
+  content: url('https://github.com/christopherholz1983/christopherholz1983.github.io/blob/main/img/chrissi_animation.gif?raw=true');
+}
+
+.text-container {
+  width: 100%; /* Ensures the text container takes the full width of its parent */
+  box-sizing: border-box; /* Accounts for padding in the width */
+}
+
+.projekt1-box {
+  background-color: white; 
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the image */
+.projekt1-box img {
+  width: 100%; /* Image spans the width of its container */
+  height: auto;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Overlay styling */
+.overlay-projekt1 {
+  position: absolute; /* Position the overlay on top of the image */
+  top: 50%; 
+  color: black;
+  font-size: 3rem;
+  text-align: left;
+  padding-left: 2%; 
+  z-index: 2; /* Ensure it appears above the image */
+}
+
+.text-container {
+  padding: 2%;
+}
+
+.text-projekt1 {
+  font-size: 1.2rem;
+  line-height: 1.6; 
+  color: black; 
+}
+
+.projekt2-box {
+  background-color: black; /* Black background */
+  padding: 2%; /* Padding inside the box */
+  position: relative; /* Allows positioning of the overlay */
+  box-sizing: border-box;
+  color: white; /* Default text color */
+}
+
+/* Style the image */
+.projekt2-box img {
+  width: 100%; /* Image spans the width of its container */
+  height: auto;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Overlay styling */
+.overlay-projekt2 {
+  position: absolute; /* Position the overlay on top of the image */
+  top: 55%; 
+  color: black;
+  font-size: 3rem;
+  text-align: left;
+  padding-left: 2%; 
+  z-index: 2; /* Ensure it appears above the image */
+}
+
+.text-container {
+  margin-top: 20px; 
+}
+
+.text-projekt2 {
+  font-size: 1.2rem;
+  line-height: 1.6; 
+  color: white; 
+}
+
+.projekt3-box {
+  background-color: black; /* Black background */
+  padding: 2%; /* Padding inside the box */
+  position: relative; /* Allows positioning of the overlay */
+  box-sizing: border-box;
+  color: white; /* Default text color */
+}
+
+/* Style the image */
+.projekt3-box img {
+  width: 100%; /* Image spans the width of its container */
+  height: auto;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Overlay styling */
+.overlay-projekt3 {
+  position: absolute; /* Position the overlay on top of the image */
+  top: 62%; 
+  color: white;
+  font-size: 3rem;
+  text-align: left;
+  padding-left: 2%; 
+  z-index: 2; /* Ensure it appears above the image */
+}
+
+.text-container {
+  margin-top: 20px; 
+}
+
+.text-projekt3 {
+  font-size: 1.2rem;
+  line-height: 1.6; 
+  color: white; 
+}
+
+.projekt4-box {
+  background-color: black; /* Black background */
+  padding: 2%; /* Padding inside the box */
+  position: relative; /* Allows positioning of the overlay */
+  box-sizing: border-box;
+  color: white; /* Default text color */
+}
+
+/* Style the image */
+.projekt4-box img {
+  width: 100%; /* Image spans the width of its container */
+  height: auto;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Overlay styling */
+.overlay-projekt4 {
+  position: absolute; /* Position the overlay on top of the image */
+  top: 55%; 
+  color: black;
+  font-size: 3rem;
+  text-align: left;
+  padding-left: 2%; 
+  z-index: 2; /* Ensure it appears above the image */
+}
+
+.text-container {
+  margin-top: 20px; 
+}
+
+.text-projekt4 {
+  font-size: 1.2rem;
+  line-height: 1.6; 
+  color: white; 
+}
+
+.footer {
+  width: 100% !important;
+  background-color: #74F1FF;
+  color: black; /* Ensure text color is black */
+  text-align: center;
+  padding: 2%;
+  bottom: 0;
+  left: 0;
+  margin-top: auto; /* Pushes the footer to the bottom */
+}
